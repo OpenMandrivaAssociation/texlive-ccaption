@@ -1,3 +1,9 @@
+# revision 23443
+# category Package
+# catalog-ctan /macros/latex/contrib/ccaption
+# catalog-date 2009-09-02 11:33:10 +0200
+# catalog-license lppl1.3
+# catalog-version 3.2b
 Name:		texlive-ccaption
 Version:	3.2b
 Release:	1
@@ -47,6 +53,7 @@ are provided for specifying your own captioning styles.
 #- source
 %doc %{_texmfdistdir}/source/latex/ccaption/ccaption.dtx
 %doc %{_texmfdistdir}/source/latex/ccaption/ccaption.ins
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -57,3 +64,5 @@ are provided for specifying your own captioning styles.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
