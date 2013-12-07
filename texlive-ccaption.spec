@@ -6,7 +6,7 @@
 # catalog-version 3.2b
 Name:		texlive-ccaption
 Version:	3.2b
-Release:	4
+Release:	5
 Summary:	Continuation headings and legends for floats
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/ccaption
