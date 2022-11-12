@@ -5,9 +5,9 @@ Summary:	Continuation headings and legends for floats
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/ccaption
 License:	LPPL1.3
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/ccaption.r23443.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/ccaption.doc.r23443.tar.xz
-Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/ccaption.source.r23443.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/ccaption.r%{version}.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/ccaption.doc.r%{version}.tar.xz
+Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/ccaption.source.r%{version}.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
