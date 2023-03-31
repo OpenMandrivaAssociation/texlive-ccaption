@@ -1,6 +1,6 @@
 Name:		texlive-ccaption
 Version:	23443
-Release:	1
+Release:	2
 Summary:	Continuation headings and legends for floats
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/ccaption
