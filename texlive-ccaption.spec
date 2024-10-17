@@ -3,7 +3,7 @@ Version:	23443
 Release:	2
 Summary:	Continuation headings and legends for floats
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/ccaption
+URL:		https://www.ctan.org/tex-archive/macros/latex/contrib/ccaption
 License:	LPPL1.3
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/ccaption.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/ccaption.doc.r%{version}.tar.xz
