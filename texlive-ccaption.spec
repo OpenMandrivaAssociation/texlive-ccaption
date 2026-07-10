@@ -1,50 +1,28 @@
-Name:		texlive-ccaption
-Version:	23443
-Release:	2
+%global tl_name ccaption
+%global tl_revision 79461
+
+Name:		texlive-%{tl_name}
+Epoch:		1
+Version:	3.2c
+Release:	%{tl_revision}.1
 Summary:	Continuation headings and legends for floats
 Group:		Publishing
 URL:		https://www.ctan.org/tex-archive/macros/latex/contrib/ccaption
-License:	LPPL1.3
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/ccaption.r%{version}.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/ccaption.doc.r%{version}.tar.xz
-Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/ccaption.source.r%{version}.tar.xz
+License:	lppl1.3
+Source0:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/ccaption.r%{tl_revision}.tar.xz
+Source1:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/ccaption.doc.r%{tl_revision}.tar.xz
+Source2:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/ccaption.source.r%{tl_revision}.tar.xz
 BuildArch:	noarch
+BuildSystem:	texlive
 BuildRequires:	texlive-tlpkg
-Requires(pre):	texlive-tlpkg
-Requires(post):	texlive-kpathsea
+%texlive_base_requires
+Provides:	texlive(%{tl_name}) = %{tl_revision}
 
 %description
-A package providing commands for 'continuation captions',
-unnumbered captions, and also a non-specific legend heading for
-any environment. Methods are also provided to define captions
-for use outside float (e.g., figure and table) environments,
-and to define new float environments and Lists of Floats. Tools
-are provided for specifying your own captioning styles.
+A package providing commands for 'continuation captions', unnumbered
+captions, and also a non-specific legend heading for any environment.
+Methods are also provided to define captions for use outside float
+(e.g., figure and table) environments, and to define new float
+environments and Lists of Floats. Tools are provided for specifying your
+own captioning styles.
 
-%post
-%{_sbindir}/texlive.post
-
-%postun
-if [ $1 -eq 0 ]; then
-	%{_sbindir}/texlive.post
-fi
-
-#-----------------------------------------------------------------------
-%files
-%{_texmfdistdir}/tex/latex/ccaption/ccaption.sty
-%doc %{_texmfdistdir}/doc/latex/ccaption/README
-%doc %{_texmfdistdir}/doc/latex/ccaption/ccaption.pdf
-#- source
-%doc %{_texmfdistdir}/source/latex/ccaption/ccaption.dtx
-%doc %{_texmfdistdir}/source/latex/ccaption/ccaption.ins
-
-#-----------------------------------------------------------------------
-%prep
-%setup -c -a1 -a2
-%autopatch -p1
-
-%build
-
-%install
-mkdir -p %{buildroot}%{_texmfdistdir}
-cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
